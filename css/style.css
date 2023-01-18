@@ -122,6 +122,7 @@ h1{
     display: flex;
     justify-content: center;
     padding-top: 30px;
+    margin-bottom: 20px;
 }
 .input2{
     background: transparent;
@@ -303,7 +304,7 @@ span{
         }
         .box2{
             width: 90%;
-            height: 59vh;
+            height: fit-content;
         }
         #answer{
             top: -115px;
