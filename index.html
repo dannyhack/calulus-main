@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculus</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fonts/remixicon.css">
+</head>
+<body>
+    <div class="container">
+
+
+        <!-- box-1 -->
+        <div class="box1">
+            <h1>CALCULATOR<br><div class="main">Parameter of a circle</div></h1>
+
+           <div class="input-hold">
+                <input class="input1" onclick="change()" onkeypress ="resets()" id="input1" type="text">
+           </div>
+            <div>
+                <span id="rad">Enter Radius</span>
+            </div>
+
+            <div id="result1" class="result">
+              
+            </div>
+            <div class="answer">
+                <span id="an">Answer</span>
+            </div>
+            <div class="btn">
+                <button id="btn1" onclick="paracircle()">CALCULATE</button>
+            </div>
+        </div>
+        <!-- box-2 -->
+        <div class="box2">
+            <h1>CALCULATOR <br> <div class="main">Area of a triangle</div></h1>
+
+           <div class="input-hold">
+                <input  onkeypress ="resett()" id="input2" class="input2" type="text">
+           </div>
+            <div>
+                <span id="base">Enter Base</span>
+            </div>
+            <div class="buttom">
+               <div class="input-hold">
+                <input id="input22" class="input2" type="text">
+               </div>
+                <div>
+                    <span id="height">Enter Height</span>
+                </div>
+                <p id="answer">Answer</p> 
+                <div id="result2" class="result2">
+                   
+                </div>
+                
+                <div class="btn2">
+                    <button id="btn2" onclick="triarea()">CALCULATE</button>
+                </div>
+            </div>
+        </div>
+        <!-- box-3 -->
+        <div class="box3">
+            <h1>CONVERTER <br> <div class="main">Celsius to Fahrenheit</div></h1>
+
+            <div class="input-hold">
+                <input onkeypress="reseting()" id="input3" class="input3" type="text">
+            </div>
+            <div>
+                <span id="cel">Enter Celsius</span>
+            </div>
+            <i class="ri-arrow-left-right-line ex"></i>
+            <div id="result3" class="result3">
+               
+            </div>
+            <div class="answer-3">
+                <span id="ans">Fahrenheit</span>
+            </div>
+            <div class="btn3">
+                <button id="btn3" onclick="convert()">CONVERT</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        // calculating parameter of a circle
+        // on-click event
+        function paracircle(rad){
+            rad = document.getElementById('input1').value;
+            rad = parseInt(rad);
+            var para = 3.14 * ( 2* rad);
+
+            document.getElementById('result1').innerHTML = para;
+            document.getElementById('an').style.transition = '0.3s';
+            document.getElementById('an').style.color = 'rgb(20, 155, 20';
+            document.getElementById('rad').style.transition = '0.3s';
+            document.getElementById('rad').style.color = 'black';
+        }
+        // on-keypress event
+        function resets(){
+            let reset = document.getElementById('result1').innerHTML = "";
+            document.getElementById('an').style.color = 'black';
+            document.getElementById('rad').style.color = 'rgb(20, 155, 20';
+        }
+
+
+        // area of a triangle
+         // on-click event
+        function triarea(b, h){
+
+            b = document.getElementById('input2').value;
+            b = parseInt(b);
+
+            h = document.getElementById('input22').value;
+            h = parseInt(h);
+
+            let area = 1/2 * b * h;
+            
+            document.getElementById('result2').innerHTML = area;
+            document.getElementById('answer').style.transition = '0.3s';
+            document.getElementById('answer').style.color = 'rgb(20, 155, 20';
+            document.getElementById('base').style.color = 'black';
+            document.getElementById('height').style.color = 'black';
+            
+        }
+         // on-keypress event
+        function resett(){
+            let reset = document.getElementById('result2').innerHTML = "";
+
+             reset = document.getElementById('input22').value = "";
+             document.getElementById('answer').style.color = 'black';
+             document.getElementById('base').style.color = 'rgb(20, 155, 20';
+             document.getElementById('height').style.color = 'rgb(20, 155, 20';
+             document.getElementById('base').style.transition = '0.3s';
+             document.getElementById('height').style.transition = '0.3s'; 
+        }
+        
+
+
+        // converting celsuis to fahrenheit
+        // on-click event
+        function convert(conv){
+            conv = document.getElementById('input3').value;
+            conv = parseInt(conv);
+            var fahrenheit = 9/5 * conv + 32;
+
+            document.getElementById('result3').innerHTML = fahrenheit;
+            document.getElementById('ans').style.color = 'rgb(20, 155, 20';
+            document.getElementById('ans').style.transition = '0.3s';
+            document.getElementById('cel').style.transition = '0.3s';
+            document.getElementById('cel').style.color = 'black';
+        }
+        // on-keypress event
+        function reseting(){
+            let reset = document.getElementById('result3').innerHTML = "";
+            document.getElementById('ans').style.color = "black";
+            document.getElementById('cel').style.transition = '0.3s';
+            document.getElementById('cel').style.color = 'rgb(20, 155, 20';
+        }
+
+
+    </script>
+
+</body>
+</html>
